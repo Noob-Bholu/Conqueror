@@ -2,7 +2,7 @@ import threading
 
 from sqlalchemy import Column, String, UnicodeText, func, distinct
 
-from tg_bot.modules.sql import SESSION, BASE
+from NoobBholu.modules.sql import SESSION, BASE
 
 
 class Rules(BASE):
