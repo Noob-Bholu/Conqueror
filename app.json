@@ -78,12 +78,12 @@
     }
   },
  
-  "stack": "heroku-22", 
-  "addons": [ 
+    "addons": [ 
      { 
         "options": { 
            "version": "12" 
         }, 
         "plan": "heroku-postgresql" 
      } 
-  ]
+  
+  }
