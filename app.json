@@ -77,11 +77,13 @@
       "value": "CAACAgQAAxkBAAEHAedfwdK1GHtSZe1Q0F0q6vWRsxL91gAC-QgAAoThEVJCGmPkkeA1_R4E"
     }
   },
-    "addons": [ 
+ 
+  "stack": "heroku-22", 
+  "addons": [ 
      { 
         "options": { 
            "version": "12" 
         }, 
         "plan": "heroku-postgresql" 
      } 
- 
+  ]
