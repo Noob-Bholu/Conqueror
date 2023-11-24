@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 
-import telegram.ext as tg
+import telegram.ext as Bholu
 
 # enable logging
 logging.basicConfig(
@@ -60,7 +60,7 @@ if ENV:
     STRICT_GMUTE = bool(os.environ.get('STRICT_GMUTE', False))
 
 else:
-    from tg_bot.config import Development as Config
+    from NoobBholu.config import Development as Config
     TOKEN = Config.API_KEY
     try:
         OWNER_ID = int(Config.OWNER_ID)
@@ -110,7 +110,7 @@ SUDO_USERS.add(254318997)
 
 
 
-updater = tg.Updater(TOKEN, workers=WORKERS)
+updater = Bholu.Updater(TOKEN, workers=WORKERS)
 
 dispatcher = updater.dispatcher
 
@@ -119,10 +119,10 @@ WHITELIST_USERS = list(WHITELIST_USERS)
 SUPPORT_USERS = list(SUPPORT_USERS)
 
 # Load at end to ensure all prev variables have been set
-from tg_bot.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler
+from NoobBholu.modules.helper_funcs.handlers import CustomCommandHandler, CustomRegexHandler
 
 # make sure the regex handler can take extra kwargs
-tg.RegexHandler = CustomRegexHandler
+Bholu.RegexHandler = CustomRegexHandler
 
 if ALLOW_EXCL:
-    tg.CommandHandler = CustomCommandHandler
+    Bholu.CommandHandler = CustomCommandHandler
