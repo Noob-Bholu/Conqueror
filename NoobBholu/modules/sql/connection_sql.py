@@ -4,7 +4,7 @@ from typing import Union
 from sqlalchemy import Column, String, Boolean, UnicodeText, Integer, func, distinct
 
 from NoobBholu.modules.helper_funcs.msg_types import Types
-from tg_bot.modules.sql import SESSION, BASE
+from NoobBholu.modules.sql import SESSION, BASE
 
 
 class ChatAccessConnectionSettings(BASE):
