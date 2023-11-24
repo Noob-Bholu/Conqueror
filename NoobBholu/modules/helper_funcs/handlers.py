@@ -1,10 +1,10 @@
-import telegram.ext as tg
+import telegram.ext as Bholu
 from telegram import Update
 
 CMD_STARTERS = ('/', '!')
 
 
-class CustomCommandHandler(tg.CommandHandler):
+class CustomCommandHandler(Bholu.CommandHandler):
     def __init__(self, command, callback, **kwargs):
         if "admin_ok" in kwargs:
             del kwargs["admin_ok"]
@@ -33,6 +33,6 @@ class CustomCommandHandler(tg.CommandHandler):
             return False
 
 
-class CustomRegexHandler(tg.RegexHandler):
+class CustomRegexHandler(Bholu.RegexHandler):
     def __init__(self, pattern, callback, friendly="", **kwargs):
         super().__init__(pattern, callback, **kwargs)
